@@ -330,3 +330,24 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jona@jona.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "jona@jona.com"], ["encrypted_password", "$2a$11$LMERFNPgoJc/sdJ9ttvm4ewL4eV0mcx2clzsQcOPrn7Q7kQZR5WgG"], ["created_at", "2018-12-21 21:39:10.627408"], ["updated_at", "2018-12-21 21:39:10.627408"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "admin@admin.com"], ["encrypted_password", "$2a$11$KGaAPghGoz56G0.vswBEneFEs1HK0uZuuI44/zcPR1gzgOWrUVpfa"], ["type", "AdminUser"], ["created_at", "2018-12-21 21:40:38.383321"], ["updated_at", "2018-12-21 21:40:38.383321"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mAdminUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."type" IN ('AdminUser') ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jona@jona.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "jona@jona.com"], ["encrypted_password", "$2a$11$vMLX.i.lBVbtunK1tBRqw.vDux0yV/OI4TTnPzJ.3xyr3o7QwQJCW"], ["created_at", "2018-12-21 21:47:48.191161"], ["updated_at", "2018-12-21 21:47:48.191161"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "adminjona@adminjona.com"], ["LIMIT", 1]]
+  [1m[36mAdminUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "adminjona@adminjona.com"], ["encrypted_password", "$2a$11$vyocEVRZ8k2AG29xC6fEVu2MQVjH9aBBc9bdn8DcY4MzBXBybQPmm"], ["type", "AdminUser"], ["created_at", "2018-12-21 21:48:07.227538"], ["updated_at", "2018-12-21 21:48:07.227538"]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
