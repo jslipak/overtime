@@ -4,7 +4,7 @@
 
 ## Models
 - Post -> date:date retinale:text
-- Users -> Devise
+x Users -> Devise
 - AdminUser -> STI
 
 ## Features: 
@@ -17,3 +17,4 @@
 ## UI:
 - Bootstrap -> formatting
 
+## VScode
