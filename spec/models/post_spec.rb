@@ -5,9 +5,11 @@ RSpec.describe Post, type: :model do
     before do  
       @post = Post.create(date: Date.today, rationale: "Anithing")
     end
+
     it 'can be created' do
       expect(@post).to be_valid
     end
+
     it 'cannot be created witout a date and rationale' do
       @post.date = nil
       @post.rationale = nil
