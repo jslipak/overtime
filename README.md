@@ -17,6 +17,6 @@ X AdminUser -> STI
 ## UI:
 - Bootstrap -> formatting
 
-## VScode
+## Refactor user associaton integration test in post_spec
 
 
