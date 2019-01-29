@@ -9,7 +9,7 @@ FactoryBot.define do
             user
         end
 
-        factory :sencon_post do
+        factory :second_post, class: "post" do
             date {Date.yesterday}
             rationale {generate :rationale}
             user
