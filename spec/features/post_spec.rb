@@ -23,7 +23,7 @@ describe 'navigate' do
             post1 = FactoryBot.create(:post)
             post2 = FactoryBot.create(:second_post)
             visit posts_path
-            expect(page).to have_content(/rationale 1|rationale 2/)
+            expect(page).to have_content(/rationale/)
         end
     end
 
