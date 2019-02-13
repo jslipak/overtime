@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-	    @post.user_id = current_user.id
+   	@post.user_id = current_user.id
 
         if @post.save
             redirect_to @post, notice: 'your post was created successfully'
@@ -20,9 +20,11 @@ class PostsController < ApplicationController
     end 
 
     def edit
+	    authorize @post
     end
 
     def update
+	authorize @post
         if  @post.update(post_params)
             redirect_to @post, notice: 'your post was edited successfully'
         else
