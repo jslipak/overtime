@@ -4,4 +4,5 @@ class Post < ApplicationRecord
  	validates_presence_of :date, :rationale
 
 	scope :posts_by, ->(user) {where(user_id: user.id) }
+	validates :overtime_request, numericality: { greater_than: 0.0 }
 end
