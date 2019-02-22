@@ -9,7 +9,7 @@ a## Models
 - AuditLog
 
 # Features: 
-- Approval Workflow
+a- Approval Workflow
 - SMS Sending -> Link to approval or overtine input
 - x Administrate admin dashboard
 - x Block non admin and guest users
@@ -29,3 +29,4 @@ a## Models
 
 ## Problems 
 - config/application.rb:9 --> undefined method `raise_in_transactional_callbacks=' for ActiveRecord::Base:Class (NoMethodError)
+- Change star_date to start_date
