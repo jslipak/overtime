@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :set_post, only: [:show, :edit, :update, :destroy]
+    before_action :set_post, only: [:show, :edit, :update, :destroy, :approve]
     def index
 			 @posts = Post.posts_by(current_user).page(params[:page]).per(10)
     end
@@ -10,7 +10,7 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.new(post_params)
-   	@post.user_id = current_user.id
+   		@post.user_id = current_user.id
 
         if @post.save
             redirect_to @post, notice: 'your post was created successfully'
@@ -39,6 +39,12 @@ class PostsController < ApplicationController
         @post.delete
         redirect_to posts_path, notice: 'Your post was deleted successfully'
     end
+
+	def approve
+		authorize @post
+  		@post.approved!
+  		redirect_to root_path, notice: "The post has been approved"
+	end
     
 
     private 

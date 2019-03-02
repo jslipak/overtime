@@ -28,5 +28,5 @@ a- Approval Workflow
 	* Exactly 10 characters
 
 ## Problems 
-- config/application.rb:9 --> undefined method `raise_in_transactional_callbacks=' for ActiveRecord::Base:Class (NoMethodError)
-- Change star_date to start_date
+-Pagination Problem --Jquery new not support .live  --> Pagination.js it's old .. I commented all lines with use pagination.js
+	-I Need to do with AuditLog
