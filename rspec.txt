@@ -19,7 +19,7 @@ pending
     cannot be accessed by non admin users
 
 Homepage
-  allows the admin to approve posts from the homepage (FAILED - 1)
+  allows the admin to approve posts from the homepage
 
 navigate
   index
@@ -71,19 +71,6 @@ User
   custom name methods
     has a full name method that combines first and last name
 
-Failures:
-
-  1) Homepage allows the admin to approve posts from the homepage
-     Failure/Error: click_on("approve_#{post.id}")
-
-     Capybara::ElementNotFound:
-       Unable to find link or button "approve_4"
-     # ./spec/features/homepage_spec.rb:10:in `block (2 levels) in <main>'
-
-Finished in 0.84442 seconds (files took 0.94252 seconds to load)
-38 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/features/homepage_spec.rb:4 # Homepage allows the admin to approve posts from the homepage
+Finished in 0.83491 seconds (files took 0.94687 seconds to load)
+38 examples, 0 failures
 
