@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: Overtime_production
-  username: Overtime
-  password: <%= ENV['OVERTIME_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+  database: <%= ENV['DATABASE'] %>
+  username: <%= ENV['USER'] %>
+  password: <%= ENV['DBPASS'] %>
