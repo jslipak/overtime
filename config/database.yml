@@ -83,5 +83,4 @@ production:
   database: Overtime_production
   username: Overtime
   password: <%= ENV['OVERTIME_DATABASE_PASSWORD'] %>
-  HEROKU_POSTGRESQL_YELLOW_URL: postgres://hstvdeygkxrpni:9bba9599da4283ac9f8c9402187ea9434d204b29eaf88e72962ec6827dac53c1@ec2-75-101-131-79.compute-1.amazonaws.com:5432/ds33aih5gbueo
 
